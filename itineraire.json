@@ -1,0 +1,127 @@
+{
+  "pays": "Yémen (Île de Socotra)",
+  "drapeau": "🇾🇪",
+  "symbole": "🌳",
+  "titre": "Socotra : Voyage sur une Île d'un Autre Monde",
+  "budget": "3500€",
+  "duree": "8 jours (recommandé)",
+  "temps_vol": "Environ 10h de vol avec escale",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée et Lagune Enchantée",
+      "legende": "Bienvenue sur l'île mythique de Socotra. Après votre arrivée et une installation rapide dans la capitale, Hadiboh, cette première journée est dédiée à une douce acclimatation. Une balade le long de la lagune de Detwah, avec ses eaux cristallines et son sable immaculé, offre un premier contact inoubliable avec les paysages uniques de l'île. C'est une introduction parfaite à la beauté brute et préservée que vous découvrirez.",
+      "lieu": "Hadiboh / Lagune de Detwah",
+      "activites": [
+        "🛬 Arrivée et transfert à Hadiboh : Accueil par votre guide local à l'aéroport de Socotra, puis transfert vers la capitale de l'île pour un premier aperçu de la vie locale.",
+        "🏞️ Découverte de la lagune de Detwah : Exploration de ce site protégé par l'UNESCO, célèbre pour son paysage marin spectaculaire et son sable blanc immaculé."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Voyage organisé obligatoire",
+          "texte": "Il est impossible de voyager à Socotra en indépendant. Vous devez obligatoirement passer par une agence locale qui organisera votre visa, vos déplacements et votre hébergement."
+        },
+        {
+          "symbole": "🛂",
+          "titre": "Visa",
+          "texte": "Un visa yéménite spécifique à Socotra est nécessaire. L'agence de voyage s'occupe des démarches, qui peuvent prendre plusieurs semaines."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🌳",
+      "titre": "Cœur du Dragon et Oasis Cachée",
+      "legende": "Plongez au cœur des paysages les plus emblématiques de Socotra. La journée commence par l'exploration du plateau de Dixam, une forêt surréaliste peuplée des légendaires dragonniers, dont la sève rouge a nourri tant de mythes. Le contraste entre ces arbres uniques et la roche du canyon est saisissant. L'après-midi offre une pause rafraîchissante dans les piscines naturelles du Wadi Dirhur, un véritable oasis creusé dans la roche.",
+      "lieu": "Plateau de Dixam / Wadi Dirhur",
+      "activites": [
+        "🌳 Exploration du plateau de Dixam : Randonnée au milieu de la forêt de Dragonniers, arbres endémiques et emblématiques de l'île. Le point de vue de Shebahon offre un panorama inoubliable sur le canyon.",
+        "🏊 Baignade dans le Wadi Dirhur : Descente dans le canyon pour une pause rafraîchissante dans ses piscines naturelles d'eau douce. Un véritable oasis de verdure au cœur d'un paysage rocheux."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Équipement",
+          "texte": "Prévoyez de bonnes chaussures de marche pour le plateau de Dixam et un maillot de bain pour le wadi."
+        },
+        {
+          "symbole": "🌍",
+          "titre": "Écosystème fragile",
+          "texte": "Les dragonniers sont une espèce menacée. Ne prélevez rien et suivez scrupuleusement les chemins indiqués par votre guide."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏜️",
+      "titre": "Dunes Blanches et Océan Indien",
+      "legende": "Cette dernière journée est une immersion dans la grandeur des paysages côtiers de Socotra. La rencontre spectaculaire entre les dunes de sable blanc immaculé et les eaux turquoise de l'Océan Indien à Arher est un spectacle inoubliable. C'est l'occasion de se détendre, de grimper au sommet d'une dune pour un panorama à 360 degrés, avant de reprendre la route vers l'aéroport, la tête remplie d'images d'un autre monde.",
+      "lieu": "Plage d'Arher / Aéroport",
+      "activites": [
+        "🏜️ Exploration de la plage d'Arher : Découverte du point de rencontre spectaculaire entre d'immenses dunes de sable blanc et l'Océan Indien. Possibilité de grimper au sommet pour une vue imprenable.",
+        "✈️ Départ de Socotra : Derniers moments pour s'imprégner de l'atmosphère unique de l'île avant le transfert vers l'aéroport pour le vol retour."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil est très fort sur les plages de sable blanc. Crème solaire, chapeau et lunettes de soleil sont indispensables."
+        },
+        {
+          "symbole": "🏕️",
+          "titre": "Hébergement",
+          "texte": "L'hébergement sur l'île est souvent simple, principalement en camping ou dans des écolodges basiques. Le confort est limité mais l'expérience est authentique."
+        }
+      ]
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois d'octobre à avril.",
+      "symbole": "📅"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Le vol principal pour Socotra part d'Abu Dhabi (EAU) une fois par semaine. Il est impératif de réserver bien à l'avance.",
+      "symbole": "✈️"
+    },
+    {
+      "titre": "La monnaie est le Rial yéménite (YER), mais il est fortement conseillé d'emporter des dollars américains (USD) en petites coupures.",
+      "symbole": "💵"
+    },
+    {
+      "titre": "La connectivité internet et mobile est quasi inexistante en dehors de la ville principale, Hadiboh. Préparez-vous à une déconnexion totale.",
+      "symbole": "📵"
+    },
+    {
+      "titre": "Aucun vaccin n'est obligatoire, mais il est recommandé d'être à jour. Consultez votre médecin pour des conseils personnalisés.",
+      "symbole": "⚕️"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Conseils aux voyageurs",
+      "titre": "France Diplomatie - Yémen",
+      "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/yemen/",
+      "symbole": "🇫🇷"
+    },
+    {
+      "legende": "Patrimoine mondial",
+      "titre": "UNESCO - Archipel de Socotra",
+      "url": "https://whc.unesco.org/fr/list/1263/",
+      "symbole": "🌍"
+    },
+    {
+      "legende": "Exemple d'agence locale",
+      "titre": "Welcome to Socotra",
+      "url": "https://welcometosocotra.com/",
+      "symbole": "📘"
+    }
+  ]
+}
