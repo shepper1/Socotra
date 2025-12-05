@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte du voyage - undefined</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    .info-window { max-width: 250px; font-family: Arial, sans-serif; }
+    .info-window img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
+    .info-window h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
+    .info-window p { margin: 5px 0; font-size: 14px; color: #666; }
+    .info-window a { color: #1a73e8; text-decoration: none; }
+    .info-window a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  
+  <script>
+    function initMap() {
+      const center = { lat: 12.591225066666667, lng: 53.926857 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: center
+      });
+      
+      const markers = [{"lat":12.6501267,"lng":54.0189684,"name":"Hadibo","jour":1,"titre":"Arrivée sur l'île mystérieuse","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.6501267,54.0189684&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.6501267,54.0189684","aiImageUrl":"jour1.jpg"},{"lat":12.471614,"lng":54.00941700000001,"name":"Plateau de Dixam & Wadi Dirhur","jour":2,"titre":"Au cœur du plateau de Dixam","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.471614,54.00941700000001&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.471614,54.00941700000001","aiImageUrl":"jour2.jpg"},{"lat":12.5500113,"lng":54.46196029999999,"name":"Homhil & Arher Beach","jour":3,"titre":"Homhil et les piscines naturelles","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.5500113,54.46196029999999&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.5500113,54.46196029999999","aiImageUrl":"jour3.jpg"},{"lat":12.4634205,"lng":53.8237385,"name":"Arher Beach & Grotte de Hoq","jour":4,"titre":"Dunes de sable et grottes mystérieuses","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.4634205,53.8237385&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.4634205,53.8237385","aiImageUrl":"jour4.jpg"},{"lat":12.6906772,"lng":53.4891979,"name":"Qalansiya & Detwah Lagoon","jour":5,"titre":"Lagons turquoise et vie marine","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.6906772,53.4891979&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.6906772,53.4891979","aiImageUrl":"jour5.jpg"},{"lat":12.7100446,"lng":53.50068599999999,"name":"Detwah Lagoon","jour":6,"titre":"Aventures aquatiques à Detwah","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.7100446,53.50068599999999&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.7100446,53.50068599999999","aiImageUrl":"jour6.jpg"},{"lat":12.6715841,"lng":54.195038,"name":"Dihamri Marine Protected Area","jour":7,"titre":"Sanctuaire marin de Dihamri","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.6715841,54.195038&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.6715841,54.195038","aiImageUrl":"jour7.jpg"},{"lat":12.4634205,"lng":53.8237385,"name":"Montagnes Hagghier & villages","jour":8,"titre":"Les montagnes Hagghier et villages perchés","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.4634205,53.8237385&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.4634205,53.8237385","aiImageUrl":"jour8.jpg"},{"lat":12.6501267,"lng":54.0189684,"name":"Hadibo / Aéroport de Socotra","jour":10,"titre":"Départ de Socotra","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=12.6501267,54.0189684&key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=12.6501267,54.0189684","aiImageUrl":"jour10.jpg"}];
+      
+      markers.forEach((markerData) => {
+        const marker = new google.maps.Marker({
+          position: { lat: markerData.lat, lng: markerData.lng },
+          map: map,
+          title: markerData.name,
+          label: String(markerData.jour)
+        });
+        
+        const contentString = `
+          <div class="info-window">
+            <img src="${markerData.streetViewUrl}" alt="Street View de ${markerData.name}" />
+            <h3>Jour ${markerData.jour}</h3>
+            <p><strong>${markerData.name}</strong></p>
+            <p><a href="${markerData.streetViewLinkUrl}" target="_blank" rel="noopener noreferrer"><strong>${markerData.titre}</strong></a></p>
+          </div>
+        `;
+        
+        const infoWindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        marker.addListener('click', () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+  
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXsVY9wZUc8Q9VnK5oYDc8bBNvzvfDH4Q&callback=initMap">
+  </script>
+</body>
+</html>
