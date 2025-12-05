@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Archipel aux Dragons : Odyssée à Socotra </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        template: {
+                            sable: '#F3E5AB',
+                            ocre: '#C66B3D',
+                            roche: '#2D2A26',
+                            ciel: '#4A6C6F',
+                            bg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #C66B3D;
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">L'Archipel aux Dragons : Odyssée à Socotra</a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée sur l'île mystérieuse</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Au cœur du plateau de Dixam</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Homhil et les piscines naturelles</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Dunes de sable et grottes mystérieuses</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Lagons turquoise et vie marine</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Aventures aquatiques à Detwah</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Sanctuaire marin de Dihamri</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Les montagnes Hagghier et villages perchés</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Retour à Hadibo et derniers instants</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Départ de Socotra</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[85vh] flex items-center justify-center overflow-hidden pt-12 md:pt-0">
+        
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+        <video autoplay muted loop playsinline 
+               poster="https://images.unsplash.com/photo-1579606946838-6db34433f3c0?q=80&w=2070"
+               class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/4456988/4456988-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.3em] mb-4 uppercase text-sm font-semibold">Feuille de Route</p>
+            <h1 class="font-Playfair italic text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">Socotra</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-light max-w-2xl mx-auto leading-relaxed">L'Archipel aux Dragons : Odyssée à Socotra</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🗓️ 10 jours uniquement</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">💰 € / pers</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🛬 Environ 15 à 20 heures (avec escales) depuis Paris</span>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-20 relative">
+        
+        <div class="text-center mb-16">
+            <span class="text-template-ocre font-bold tracking-widest text-xs uppercase">Le Roadtrip</span>
+            <h2 class="font-serif text-4xl mt-2 text-template-roche">Votre Programme</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée sur l'île mystérieuse</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, vous atterrissez sur l'île de Socotra, un joyau préservé de l'océan Indien. L'air chaud et les paysages arides vous accueillent, promettant une immersion totale dans une nature unique. Prenez le temps de vous installer et de ressentir l'atmosphère particulière de cette terre lointaine. La journée sera dédiée à une découverte douce de la capitale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛬 <strong>Arrivée à l'aéroport de Socotra</strong>: Après les formalités, transfert vers la petite capitale de l'île, Hadibo, où vous vous installerez dans votre hébergement pour la nuit.</li>
+                            
+                                <li>🚶‍♂️ <strong>Première balade à Hadibo</strong>: Flânez dans les rues animées du marché local, observez la vie quotidienne et imprégnez-vous des premières impressions de l'île.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Les vols vers Socotra sont souvent limités et peuvent être sujets à des changements. Une bonne flexibilité est essentielle.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Climat</p>
+                                <p class="text-gray-700">Le climat est désertique tropical. Prévoyez des vêtements légers, un chapeau et de la crème solaire dès le premier jour.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Au cœur du plateau de Dixam</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'aventure commence vraiment avec la découverte des paysages emblématiques de Socotra. Vous vous enfoncerez dans l'intérieur des terres pour explorer le plateau de Dixam, un sanctuaire pour les arbres emblématiques de l'île. Laissez-vous émerveiller par la forêt de Dragonniers et les panoramas à couper le souffle, témoins d'une biodiversité unique au monde.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚗 <strong>Exploration du plateau de Dixam</strong>: Traversez des paysages lunaires et découvrez les célèbres Dragonniers de Socotra, des arbres endémiques aux formes surprenantes, symboles de l'île.</li>
+                            
+                                <li>🏞️ <strong>Randonnée dans le Wadi Dirhur</strong>: Descendez dans ce canyon spectaculaire, bordé de palmiers dattiers, et profitez d'une baignade rafraîchissante dans ses piscines naturelles.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">Il est crucial de boire beaucoup d'eau tout au long de la journée, surtout lors des explorations en plein air.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">N'oubliez pas votre appareil photo pour immortaliser les paysages uniques et la flore endémique de Socotra.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Homhil et les piscines naturelles</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La journée vous mènera à Homhil, une zone protégée où la nature déploie toute sa splendeur. Vous y verrez des arbres bouteilles et des Dragonniers dans leur habitat naturel, offrant des vues imprenables sur l'océan. Une baignade dans une piscine naturelle à débordement avec une vue panoramique sur la mer d'Arabie sera une expérience inoubliable, avant de rejoindre une plage idyllique pour la nuit.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚶‍♀️ <strong>Randonnée dans la zone protégée de Homhil</strong>: Admirez les paysages arides et la flore unique, notamment les arbres bouteilles et les Dragonniers, avec des vues spectaculaires sur la côte.</li>
+                            
+                                <li>🏊 <strong>Baignade dans la piscine naturelle de Homhil</strong>: Profitez d'une baignade rafraîchissante dans une piscine à débordement naturelle offrant une vue imprenable sur l'océan Indien.</li>
+                            
+                                <li>🏕️ <strong>Nuit à Arher Beach</strong>: Installez votre campement sur cette magnifique plage de sable blanc, où les dunes rencontrent la mer.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">♻️ Environnement</p>
+                                <p class="text-gray-700">Respectez la nature en ne laissant aucune trace de votre passage et en ne cueillant pas de plantes.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎒 Équipement</p>
+                                <p class="text-gray-700">Prévoyez des chaussures de marche confortables et un sac à dos léger pour les excursions.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dunes de sable et grottes mystérieuses</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après une nuit bercée par le son des vagues à Arher, vous explorerez les impressionnantes dunes de sable qui plongent dans la mer. L'après-midi sera consacrée à la découverte de l'intérieur de l'île, avec ses grottes fascinantes qui recèlent des trésors géologiques. Une journée entre mer et terre, pour une immersion totale dans la diversité des paysages de Socotra.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚶‍♂️ <strong>Ascension des dunes de sable d'Arher</strong>: Gravissez les immenses dunes de sable blanc qui se jettent dans la mer, offrant des vues panoramiques sur la côte.</li>
+                            
+                                <li>🔦 <strong>Exploration de la grotte de Hoq</strong>: Découvrez cette grotte impressionnante avec ses stalactites et stalagmites millénaires, un voyage fascinant dans les profondeurs de l'île.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Éclairage</p>
+                                <p class="text-gray-700">Une lampe frontale est indispensable pour l'exploration de la grotte de Hoq, car elle n'est pas éclairée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Chaussures</p>
+                                <p class="text-gray-700">Des chaussures fermées et antidérapantes sont recommandées pour la marche dans la grotte.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lagons turquoise et vie marine</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, cap sur la côte ouest de l'île, vers Qalansiya, un charmant village de pêcheurs. Vous serez émerveillé par la beauté de la lagune de Detwah, un lagon aux eaux turquoise et au sable blanc immaculé. C'est un endroit idéal pour se détendre, nager et observer la vie marine, tout en profitant de la tranquillité de ce paradis préservé.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚗 <strong>Visite du village de pêcheurs de Qalansiya</strong>: Rencontrez les habitants, observez leur mode de vie traditionnel et admirez les maisons typiques.</li>
+                            
+                                <li>🏖️ <strong>Détente à la lagune de Detwah</strong>: Profitez des eaux calmes et peu profondes de ce lagon spectaculaire, idéal pour la baignade et la relaxation.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Culture locale</p>
+                                <p class="text-gray-700">Respectez les coutumes locales en vous habillant modestement, surtout dans les villages.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Monnaie</p>
+                                <p class="text-gray-700">La monnaie locale est le Riyal yéménite. Prévoyez de l'argent liquide car les distributeurs sont rares.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventures aquatiques à Detwah</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La lagune de Detwah continue de vous enchanter avec ses opportunités d'exploration marine. Que ce soit en kayak ou en snorkeling, vous découvrirez la richesse des fonds marins et la diversité des espèces qui peuplent ces eaux cristallines. Une rencontre avec les dauphins est possible, ajoutant une touche de magie à cette journée dédiée aux plaisirs aquatiques. La nuit, le ciel étoilé sera votre toit.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚣‍♀️ <strong>Kayak ou snorkeling dans la lagune de Detwah</strong>: Explorez les eaux turquoise en kayak ou plongez avec masque et tuba pour admirer les poissons colorés et les coraux.</li>
+                            
+                                <li>🐬 <strong>Observation des dauphins (si chanceux)</strong>: Partez en bateau avec un pêcheur local pour tenter d'apercevoir des dauphins jouant dans les eaux de l'océan.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐠 Vie marine</p>
+                                <p class="text-gray-700">Ne touchez pas les coraux ni la vie marine pour préserver l'écosystème fragile de l'île.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Même dans l'eau, le soleil est intense. Utilisez une crème solaire respectueuse des coraux et portez un lycra.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sanctuaire marin de Dihamri</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Direction la côte est pour découvrir Dihamri, une réserve marine réputée pour ses récifs coralliens spectaculaires. C'est l'endroit idéal pour une session de snorkeling inoubliable, où vous nagerez au milieu d'une multitude de poissons tropicaux. L'après-midi sera dédiée à la détente sur la plage, profitant du soleil et de la sérénité des lieux, avant une nouvelle nuit sous les étoiles.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🐠 <strong>Snorkeling à Dihamri</strong>: Plongez dans les eaux claires de cette réserve marine et explorez l'un des plus beaux récifs coralliens de Socotra, grouillant de vie marine.</li>
+                            
+                                <li>🏖️ <strong>Détente sur la plage de Dihamri</strong>: Profitez du soleil et de la tranquillité de la plage, avec la possibilité d'observer les pêcheurs locaux.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤿 Équipement</p>
+                                <p class="text-gray-700">Si vous avez votre propre équipement de snorkeling, n'hésitez pas à l'apporter. Sinon, il est souvent fourni par les guides.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🕰️ Temps libre</p>
+                                <p class="text-gray-700">Profitez de ce moment pour vous détendre ou lire un livre, loin de l'agitation du monde.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Les montagnes Hagghier et villages perchés</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'itinéraire vous emmène vers les majestueuses montagnes Hagghier, le cœur de l'île. Vous explorerez des paysages montagneux spectaculaires, parsemés de villages isolés où le temps semble s'être arrêté. Une immersion dans la vie rurale socotrienne, avec la possibilité de rencontrer les habitants et de découvrir leur artisanat. Une journée riche en découvertes culturelles et naturelles.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>⛰️ <strong>Randonnée dans les montagnes Hagghier</strong>: Explorez les sentiers de montagne, admirez les panoramas et découvrez la flore unique de cette région.</li>
+                            
+                                <li>🏡 <strong>Visite de villages de montagne</strong>: Rencontrez les habitants, observez leur mode de vie traditionnel et découvrez l'artisanat local.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♂️ Difficulté</p>
+                                <p class="text-gray-700">Certains sentiers de montagne peuvent être escarpés. Une bonne condition physique est recommandée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">C'est l'occasion d'acheter des produits locaux et de soutenir l'économie des villages.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Hadibo et derniers instants</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après ces jours d'exploration intense, vous retournerez à Hadibo pour une dernière immersion dans la vie locale. Profitez-en pour faire quelques emplettes, acheter des souvenirs uniques ou simplement vous imprégner de l'ambiance de la capitale. C'est l'occasion de repenser aux merveilles découvertes et de savourer les derniers instants sur cette île hors du commun, avant le départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛍️ <strong>Shopping de souvenirs à Hadibo</strong>: Procurez-vous des produits locaux comme de l'encens, du miel de Dragonnier ou de l'artisanat.</li>
+                            
+                                <li>🍽️ <strong>Dîner d'adieu</strong>: Profitez d'un dernier repas traditionnel à Hadibo, pour clôturer votre aventure socotrienne.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Préparation</p>
+                                <p class="text-gray-700">Vérifiez l'heure de votre vol de retour et assurez-vous d'avoir tous vos documents de voyage.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💬 Échanges</p>
+                                <p class="text-gray-700">C'est une bonne occasion de discuter avec votre guide et de partager vos impressions sur le voyage.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Socotra</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de quitter Socotra, des souvenirs plein la tête et le cœur rempli d'images inoubliables. Le transfert vers l'aéroport marque la fin de cette aventure exceptionnelle. Vous emporterez avec vous le secret de cette île mystérieuse, ses paysages lunaires et la gentillesse de ses habitants. Un voyage qui restera gravé dans votre mémoire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚗 <strong>Transfert à l'aéroport de Socotra</strong>: Départ de Hadibo pour l'aéroport, en fonction de l'horaire de votre vol.</li>
+                            
+                                <li>🛫 <strong>Vol retour vers Paris</strong>: Embarquement pour votre vol de retour, avec des escales.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Socotra/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛂 Formalités</p>
+                                <p class="text-gray-700">Assurez-vous d'avoir tous vos documents de voyage (passeport, visa) à portée de main.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👋 Au revoir</p>
+                                <p class="text-gray-700">Un dernier regard sur l'île avant de s'envoler, emportant avec vous une part de sa magie.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <footer id="pratique" class="bg-white border-t border-gray-200 pt-16 pb-10 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget vol:: </strong>2000€/pers (Vol Paris - Dubaï/Abu Dhabi - Socotra A/R, incluant les vols internationaux et le vol domestique vers Socotra, qui est souvent opéré par des compagnies régionales ou des charters)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget transports:: </strong>600€/pers (Transports sur l'île en 4x4 avec chauffeur, carburant inclus, pour toute la durée du séjour. Souvent intégré dans les packages locaux.)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget repas:: </strong>350€/pers (Repas inclus dans le package local, généralement préparés par le guide/cuisinier sur place, à base de produits frais. Environ 35-45€/jour.)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget logement:: </strong>550€/pers (Principalement du camping sauvage avec équipement fourni, quelques nuits en guesthouse simple à Hadibo. Environ 55-70€/nuit.)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget activités:: </strong>500€/pers (Droits d'entrée dans les zones protégées, services d'un guide local francophone/anglophone, excursions en bateau, matériel de snorkeling. Souvent inclus dans le package.)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Les périodes idéales pour ce séjour sont les mois de Octobre à Avril, évitant la saison des moussons.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>🧳</span> À savoir
+                </h4>
+                <ul class="text-sm text-gray-600 space-y-3">
+
+                        <li><strong>🛂 :</strong> Un visa pour le Yémen est obligatoire et souvent difficile à obtenir. Il est généralement géré par l'agence de voyage locale.</li>
+                    
+                        <li><strong>💰 :</strong> La monnaie locale est le Riyal yéménite (YER). Prévoyez des dollars américains ou des euros en petites coupures pour les dépenses personnelles.</li>
+                    
+                        <li><strong>🏕️ :</strong> L'infrastructure touristique est très rudimentaire. Attendez-vous à du camping sauvage et des conditions simples.</li>
+                    
+                        <li><strong>📶 :</strong> La couverture mobile est limitée. Une carte SIM locale peut être utile pour les urgences, mais le réseau est faible hors Hadibo.</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2"><span>🔗</span> Liens Utiles</h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://shepper1.github.io/Socotra/map.html" target="_blank" class="hover:underline flex items-center gap-2"><strong>🗺️ Carte</strong></a></li>
+                    
+                        <li><a href="https://www.socotra.info/" target="_blank" class="hover:underline flex items-center gap-2"><strong>📘 Socotra Eco-Tourism Society</strong></a></li>
+                    
+                        <li><a href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/yemen/" target="_blank" class="hover:underline flex items-center gap-2"><strong>⚠️ France Diplomatie - Yémen</strong></a></li>
+                    
+                        <li><a href="https://www.meteoblue.com/fr/meteo/semaine/socotra_yemen_7820710" target="_blank" class="hover:underline flex items-center gap-2"><strong>🌤️ Météo Socotra</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-100 pt-8">
+            <p class="font-serif text-2xl text-template-roche mb-2">Socotra</p>
+            <p class="text-xs text-gray-400">© 2025 - Roadmap</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Gestion de l'affichage du menu au scroll
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // 2. Détection de l'étape active
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+
+                    document.querySelectorAll('.nav-item-desktop').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (activeId.includes('jour') && linkHref === 'jour-1') {
+                            link.classList.add('text-template-ocre');
+                        } else if (activeId === 'pratique' && linkHref === 'pratique') {
+                            link.classList.add('text-template-ocre');
+                        } else {
+                            link.classList.remove('text-template-ocre');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('div[id^="jour-"], footer#pratique').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
