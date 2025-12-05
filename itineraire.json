@@ -1,0 +1,323 @@
+{
+  "pays": "Socotra",
+  "drapeau": "🇾🇪",
+  "symbole": "🌴",
+  "titre": "L'Archipel aux Dragons : Odyssée à Socotra",
+  "budget": "€",
+  "duree": "10 jours uniquement",
+  "temps_vol": "Environ 15 à 20 heures (avec escales)",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée sur l'île mystérieuse",
+      "legende": "Après un long voyage, vous atterrissez sur l'île de Socotra, un joyau préservé de l'océan Indien. L'air chaud et les paysages arides vous accueillent, promettant une immersion totale dans une nature unique. Prenez le temps de vous installer et de ressentir l'atmosphère particulière de cette terre lointaine. La journée sera dédiée à une découverte douce de la capitale.",
+      "lieu": "Hadibo",
+      "activites": [
+        "🛬 <strong>Arrivée à l'aéroport de Socotra</strong>: Après les formalités, transfert vers la petite capitale de l'île, Hadibo, où vous vous installerez dans votre hébergement pour la nuit.",
+        "🚶‍♂️ <strong>Première balade à Hadibo</strong>: Flânez dans les rues animées du marché local, observez la vie quotidienne et imprégnez-vous des premières impressions de l'île."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Les vols vers Socotra sont souvent limités et peuvent être sujets à des changements. Une bonne flexibilité est essentielle."
+        },
+        {
+          "symbole": "🌡️",
+          "titre": "Climat",
+          "texte": "Le climat est désertique tropical. Prévoyez des vêtements légers, un chapeau et de la crème solaire dès le premier jour."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🌳",
+      "titre": "Au cœur du plateau de Dixam",
+      "legende": "Aujourd'hui, l'aventure commence vraiment avec la découverte des paysages emblématiques de Socotra. Vous vous enfoncerez dans l'intérieur des terres pour explorer le plateau de Dixam, un sanctuaire pour les arbres emblématiques de l'île. Laissez-vous émerveiller par la forêt de Dragonniers et les panoramas à couper le souffle, témoins d'une biodiversité unique au monde.",
+      "lieu": "Plateau de Dixam & Wadi Dirhur",
+      "activites": [
+        "🚗 <strong>Exploration du plateau de Dixam</strong>: Traversez des paysages lunaires et découvrez les célèbres Dragonniers de Socotra, des arbres endémiques aux formes surprenantes, symboles de l'île.",
+        "🏞️ <strong>Randonnée dans le Wadi Dirhur</strong>: Descendez dans ce canyon spectaculaire, bordé de palmiers dattiers, et profitez d'une baignade rafraîchissante dans ses piscines naturelles."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Il est crucial de boire beaucoup d'eau tout au long de la journée, surtout lors des explorations en plein air."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "N'oubliez pas votre appareil photo pour immortaliser les paysages uniques et la flore endémique de Socotra."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🌿",
+      "titre": "Homhil et les piscines naturelles",
+      "legende": "La journée vous mènera à Homhil, une zone protégée où la nature déploie toute sa splendeur. Vous y verrez des arbres bouteilles et des Dragonniers dans leur habitat naturel, offrant des vues imprenables sur l'océan. Une baignade dans une piscine naturelle à débordement avec une vue panoramique sur la mer d'Arabie sera une expérience inoubliable, avant de rejoindre une plage idyllique pour la nuit.",
+      "lieu": "Homhil & Arher Beach",
+      "activites": [
+        "🚶‍♀️ <strong>Randonnée dans la zone protégée de Homhil</strong>: Admirez les paysages arides et la flore unique, notamment les arbres bouteilles et les Dragonniers, avec des vues spectaculaires sur la côte.",
+        "🏊 <strong>Baignade dans la piscine naturelle de Homhil</strong>: Profitez d'une baignade rafraîchissante dans une piscine à débordement naturelle offrant une vue imprenable sur l'océan Indien.",
+        "🏕️ <strong>Nuit à Arher Beach</strong>: Installez votre campement sur cette magnifique plage de sable blanc, où les dunes rencontrent la mer."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "♻️",
+          "titre": "Environnement",
+          "texte": "Respectez la nature en ne laissant aucune trace de votre passage et en ne cueillant pas de plantes."
+        },
+        {
+          "symbole": "🎒",
+          "titre": "Équipement",
+          "texte": "Prévoyez des chaussures de marche confortables et un sac à dos léger pour les excursions."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏖️",
+      "titre": "Dunes de sable et grottes mystérieuses",
+      "legende": "Après une nuit bercée par le son des vagues à Arher, vous explorerez les impressionnantes dunes de sable qui plongent dans la mer. L'après-midi sera consacrée à la découverte de l'intérieur de l'île, avec ses grottes fascinantes qui recèlent des trésors géologiques. Une journée entre mer et terre, pour une immersion totale dans la diversité des paysages de Socotra.",
+      "lieu": "Arher Beach & Grotte de Hoq",
+      "activites": [
+        "🚶‍♂️ <strong>Ascension des dunes de sable d'Arher</strong>: Gravissez les immenses dunes de sable blanc qui se jettent dans la mer, offrant des vues panoramiques sur la côte.",
+        "🔦 <strong>Exploration de la grotte de Hoq</strong>: Découvrez cette grotte impressionnante avec ses stalactites et stalagmites millénaires, un voyage fascinant dans les profondeurs de l'île."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Éclairage",
+          "texte": "Une lampe frontale est indispensable pour l'exploration de la grotte de Hoq, car elle n'est pas éclairée."
+        },
+        {
+          "symbole": "👟",
+          "titre": "Chaussures",
+          "texte": "Des chaussures fermées et antidérapantes sont recommandées pour la marche dans la grotte."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🐠",
+      "titre": "Lagons turquoise et vie marine",
+      "legende": "Aujourd'hui, cap sur la côte ouest de l'île, vers Qalansiya, un charmant village de pêcheurs. Vous serez émerveillé par la beauté de la lagune de Detwah, un lagon aux eaux turquoise et au sable blanc immaculé. C'est un endroit idéal pour se détendre, nager et observer la vie marine, tout en profitant de la tranquillité de ce paradis préservé.",
+      "lieu": "Qalansiya & Detwah Lagoon",
+      "activites": [
+        "🚗 <strong>Visite du village de pêcheurs de Qalansiya</strong>: Rencontrez les habitants, observez leur mode de vie traditionnel et admirez les maisons typiques.",
+        "🏖️ <strong>Détente à la lagune de Detwah</strong>: Profitez des eaux calmes et peu profondes de ce lagon spectaculaire, idéal pour la baignade et la relaxation."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🤝",
+          "titre": "Culture locale",
+          "texte": "Respectez les coutumes locales en vous habillant modestement, surtout dans les villages."
+        },
+        {
+          "symbole": "💰",
+          "titre": "Monnaie",
+          "texte": "La monnaie locale est le Riyal yéménite. Prévoyez de l'argent liquide car les distributeurs sont rares."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🛶",
+      "titre": "Aventures aquatiques à Detwah",
+      "legende": "La lagune de Detwah continue de vous enchanter avec ses opportunités d'exploration marine. Que ce soit en kayak ou en snorkeling, vous découvrirez la richesse des fonds marins et la diversité des espèces qui peuplent ces eaux cristallines. Une rencontre avec les dauphins est possible, ajoutant une touche de magie à cette journée dédiée aux plaisirs aquatiques. La nuit, le ciel étoilé sera votre toit.",
+      "lieu": "Detwah Lagoon",
+      "activites": [
+        "🚣‍♀️ <strong>Kayak ou snorkeling dans la lagune de Detwah</strong>: Explorez les eaux turquoise en kayak ou plongez avec masque et tuba pour admirer les poissons colorés et les coraux.",
+        "🐬 <strong>Observation des dauphins (si chanceux)</strong>: Partez en bateau avec un pêcheur local pour tenter d'apercevoir des dauphins jouant dans les eaux de l'océan."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🐠",
+          "titre": "Vie marine",
+          "texte": "Ne touchez pas les coraux ni la vie marine pour préserver l'écosystème fragile de l'île."
+        },
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Même dans l'eau, le soleil est intense. Utilisez une crème solaire respectueuse des coraux et portez un lycra."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🌊",
+      "titre": "Sanctuaire marin de Dihamri",
+      "legende": "Direction la côte est pour découvrir Dihamri, une réserve marine réputée pour ses récifs coralliens spectaculaires. C'est l'endroit idéal pour une session de snorkeling inoubliable, où vous nagerez au milieu d'une multitude de poissons tropicaux. L'après-midi sera dédiée à la détente sur la plage, profitant du soleil et de la sérénité des lieux, avant une nouvelle nuit sous les étoiles.",
+      "lieu": "Dihamri Marine Protected Area",
+      "activites": [
+        "🐠 <strong>Snorkeling à Dihamri</strong>: Plongez dans les eaux claires de cette réserve marine et explorez l'un des plus beaux récifs coralliens de Socotra, grouillant de vie marine.",
+        "🏖️ <strong>Détente sur la plage de Dihamri</strong>: Profitez du soleil et de la tranquillité de la plage, avec la possibilité d'observer les pêcheurs locaux."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🤿",
+          "titre": "Équipement",
+          "texte": "Si vous avez votre propre équipement de snorkeling, n'hésitez pas à l'apporter. Sinon, il est souvent fourni par les guides."
+        },
+        {
+          "symbole": "🕰️",
+          "titre": "Temps libre",
+          "texte": "Profitez de ce moment pour vous détendre ou lire un livre, loin de l'agitation du monde."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "⛰️",
+      "titre": "Les montagnes Hagghier et villages perchés",
+      "legende": "Aujourd'hui, l'itinéraire vous emmène vers les majestueuses montagnes Hagghier, le cœur de l'île. Vous explorerez des paysages montagneux spectaculaires, parsemés de villages isolés où le temps semble s'être arrêté. Une immersion dans la vie rurale socotrienne, avec la possibilité de rencontrer les habitants et de découvrir leur artisanat. Une journée riche en découvertes culturelles et naturelles.",
+      "lieu": "Montagnes Hagghier & villages",
+      "activites": [
+        "⛰️ <strong>Randonnée dans les montagnes Hagghier</strong>: Explorez les sentiers de montagne, admirez les panoramas et découvrez la flore unique de cette région.",
+        "🏡 <strong>Visite de villages de montagne</strong>: Rencontrez les habitants, observez leur mode de vie traditionnel et découvrez l'artisanat local."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♂️",
+          "titre": "Difficulté",
+          "texte": "Certains sentiers de montagne peuvent être escarpés. Une bonne condition physique est recommandée."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "C'est l'occasion d'acheter des produits locaux et de soutenir l'économie des villages."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🛍️",
+      "titre": "Retour à Hadibo et derniers instants",
+      "legende": "Après ces jours d'exploration intense, vous retournerez à Hadibo pour une dernière immersion dans la vie locale. Profitez-en pour faire quelques emplettes, acheter des souvenirs uniques ou simplement vous imprégner de l'ambiance de la capitale. C'est l'occasion de repenser aux merveilles découvertes et de savourer les derniers instants sur cette île hors du commun, avant le départ.",
+      "lieu": "Hadibo",
+      "activites": [
+        "🛍️ <strong>Shopping de souvenirs à Hadibo</strong>: Procurez-vous des produits locaux comme de l'encens, du miel de Dragonnier ou de l'artisanat.",
+        "🍽️ <strong>Dîner d'adieu</strong>: Profitez d'un dernier repas traditionnel à Hadibo, pour clôturer votre aventure socotrienne."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "✈️",
+          "titre": "Préparation",
+          "texte": "Vérifiez l'heure de votre vol de retour et assurez-vous d'avoir tous vos documents de voyage."
+        },
+        {
+          "symbole": "💬",
+          "titre": "Échanges",
+          "texte": "C'est une bonne occasion de discuter avec votre guide et de partager vos impressions sur le voyage."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🛫",
+      "titre": "Départ de Socotra",
+      "legende": "C'est le moment de quitter Socotra, des souvenirs plein la tête et le cœur rempli d'images inoubliables. Le transfert vers l'aéroport marque la fin de cette aventure exceptionnelle. Vous emporterez avec vous le secret de cette île mystérieuse, ses paysages lunaires et la gentillesse de ses habitants. Un voyage qui restera gravé dans votre mémoire.",
+      "lieu": "Hadibo / Aéroport de Socotra",
+      "activites": [
+        "🚗 <strong>Transfert à l'aéroport de Socotra</strong>: Départ de Hadibo pour l'aéroport, en fonction de l'horaire de votre vol.",
+        "🛫 <strong>Vol retour vers Paris</strong>: Embarquement pour votre vol de retour, avec des escales."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🛂",
+          "titre": "Formalités",
+          "texte": "Assurez-vous d'avoir tous vos documents de voyage (passeport, visa) à portée de main."
+        },
+        {
+          "symbole": "👋",
+          "titre": "Au revoir",
+          "texte": "Un dernier regard sur l'île avant de s'envoler, emportant avec vous une part de sa magie."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "2000€/pers (Vol Paris - Dubaï/Abu Dhabi - Socotra A/R, incluant les vols internationaux et le vol domestique vers Socotra, qui est souvent opéré par des compagnies régionales ou des charters)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "600€/pers (Transports sur l'île en 4x4 avec chauffeur, carburant inclus, pour toute la durée du séjour. Souvent intégré dans les packages locaux.)",
+      "symbole": "🚗"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "350€/pers (Repas inclus dans le package local, généralement préparés par le guide/cuisinier sur place, à base de produits frais. Environ 35-45€/jour.)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "550€/pers (Principalement du camping sauvage avec équipement fourni, quelques nuits en guesthouse simple à Hadibo. Environ 55-70€/nuit.)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "500€/pers (Droits d'entrée dans les zones protégées, services d'un guide local francophone/anglophone, excursions en bateau, matériel de snorkeling. Souvent inclus dans le package.)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de Octobre à Avril, évitant la saison des moussons.",
+      "symbole": "🌴"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Un visa pour le Yémen est obligatoire et souvent difficile à obtenir. Il est généralement géré par l'agence de voyage locale.",
+      "symbole": "🛂"
+    },
+    {
+      "titre": "La monnaie locale est le Riyal yéménite (YER). Prévoyez des dollars américains ou des euros en petites coupures pour les dépenses personnelles.",
+      "symbole": "💰"
+    },
+    {
+      "titre": "L'infrastructure touristique est très rudimentaire. Attendez-vous à du camping sauvage et des conditions simples.",
+      "symbole": "🏕️"
+    },
+    {
+      "titre": "La couverture mobile est limitée. Une carte SIM locale peut être utile pour les urgences, mais le réseau est faible hors Hadibo.",
+      "symbole": "📶"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations générales sur Socotra",
+      "titre": "Socotra Eco-Tourism Society",
+      "url": "https://www.socotra.info/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Conseils aux voyageurs (Ministère des Affaires Étrangères)",
+      "titre": "France Diplomatie - Yémen",
+      "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/yemen/",
+      "symbole": "⚠️"
+    },
+    {
+      "legende": "Prévisions météo locales",
+      "titre": "Météo Socotra",
+      "url": "https://www.meteoblue.com/fr/meteo/semaine/socotra_yemen_7820710",
+      "symbole": "🌤️"
+    }
+  ]
+}
